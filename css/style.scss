@@ -84,6 +84,7 @@ body {
 		height: 300px;
 		margin: 10px;
 		display: inline-block;
+		cursor: pointer;
 	}
 
 	#tile-heroes {
@@ -104,5 +105,67 @@ body {
 
 	#tile-heroes4 {
 		background-image: url('../images/tiles/tile-heroes.png');
+	}
+}
+
+#slide-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	display: none;
+
+	.slide-arrow {
+		color: white;
+		font-size: 1.5em;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100px;
+		background: rgba(152, 137, 140, 0.07) no-repeat center center;
+		cursor: pointer;
+	}
+
+	#slide-right {
+		right: 0;
+		background-image: url($icon-arrow-right);
+	}
+
+	#slide-left {
+		left: 0;
+		background-image: url($icon-arrow-left);
+	}
+
+	#slide-title, #slide-info {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.5);
+		height: 67px;
+		left: 0;
+		right: 0;
+	}
+
+	#slide-title {
+		font-size: 1.2em;
+		top: 0;
+		padding-top: 20px;
+	}
+
+	#slide-info {
+		font-size: 0.8em;
+		bottom: 0;
+		padding-top: 36px;
+	}
+
+	#slide-image {
+		background: no-repeat center center;
+		height: 100%;
+		cursor: pointer;
+
+		img {
+			display: none;
+		}
 	}
 }
