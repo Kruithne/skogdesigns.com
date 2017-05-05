@@ -1,3 +1,5 @@
+@import 'icons';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,15 +12,20 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background: #212433;
-	color: #dbdbdb;
+	color: #c0c0c0;
 	text-align: center;
 	font-size: 2em;
+}
+
+.link {
+	cursor: pointer;
 }
 
 #header {
 	margin: 40px auto 0 auto;
 	font-size: 2em;
 	font-weight: bold;
+	color: #dbdbdb;
 
 	span {
 		color: #3376c5;
@@ -36,4 +43,66 @@ body {
 	font-style: normal;
 	width: 800px;
 	font-size: 0.55em;
+}
+
+#button-tray {
+	list-style: none;
+	margin-top: 10px;
+
+	li {
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		margin: 0 5px;
+		background: no-repeat center;
+	}
+
+	#button-twitter {
+		background-image: url($icon-twitter);
+	}
+
+	#button-home {
+		background-image: url($icon-home);
+	}
+
+	#button-behance {
+		background-image: url($icon-behance);
+	}
+
+	#button-mail {
+		background-image: url($icon-mail);
+	}
+}
+
+#tiles {
+	width: 1280px;
+	margin: 30px auto 0 auto;
+
+	.tile {
+		background: no-repeat center;
+		width: 400px;
+		height: 300px;
+		margin: 10px;
+		display: inline-block;
+	}
+
+	#tile-heroes {
+		background-image: url('../images/tile-heroes.png');
+	}
+
+	#tile-heroes1 {
+		background-image: url('../images/tile-heroes.png');
+	}
+
+	#tile-heroes2 {
+		background-image: url('../images/tile-heroes.png');
+	}
+
+	#tile-heroes3 {
+		background-image: url('../images/tile-heroes.png');
+	}
+
+	#tile-heroes4 {
+		background-image: url('../images/tile-heroes.png');
+	}
 }

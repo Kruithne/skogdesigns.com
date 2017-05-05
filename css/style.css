@@ -8,14 +8,18 @@
 body {
   font-family: 'Lato', sans-serif;
   background: #212433;
-  color: #dbdbdb;
+  color: #c0c0c0;
   text-align: center;
   font-size: 2em; }
+
+.link {
+  cursor: pointer; }
 
 #header {
   margin: 40px auto 0 auto;
   font-size: 2em;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #dbdbdb; }
   #header span {
     color: #3376c5; }
 
@@ -29,3 +33,41 @@ body {
   font-style: normal;
   width: 800px;
   font-size: 0.55em; }
+
+#button-tray {
+  list-style: none;
+  margin-top: 10px; }
+  #button-tray li {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 0 5px;
+    background: no-repeat center; }
+  #button-tray #button-twitter {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAABYklEQVQ4jbXUP2uUQRSF8TPLBrUUtBYs/LdFGkVE7AQRu0DAMoVYWEkgkE9gyliriEVabcRObEWxSJoY00QQDAQMKhIlmP2l2BU26+Z9k42eau7M3GfOvcxM8o/V3M9mNJNcS9JKsp7kRSlltWd9JGjh3B5gJ7BgpzZwG+N4hlPBPXzC2SpnmLe7tnAXF4Mn3cl1jO0CvFEBgx/4gquNJCvdvKNJnuI5LvQxR2s60kwyXkp5GZzErwGnzmMGN/GgxuHn3nIuYxKbNUlVet9rdSzJZBI1ZVVp+c+gkWQuSTtJOQDw9Y4I02gPWW4bp/uBh3Qu6MchgK/+8osRrAzp7srAJuASvu4T+LCyszrvdRYf9gB7gyP9jEZfvJpkKcmxypOTt0mul1J+DnI1gSnMYa3G1W/cx+GqMs/gEb5VgL7jMVo1ztMspSwluYU7Sc6n83ke766vJVlM8q6UslkH+y/aBpSGzy8/hyqZAAAAAElFTkSuQmCC"); }
+  #button-tray #button-home {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAACXBIWXMAAAsSAAALEgHS3X78AAABpklEQVQYGQXBz8vfAwDA8ffnu8c2T0/KDkrNZQ47ePYHcJmDWkt5bg6yJmWkSAv5C/y4cLNanPA4OFAL24EcOFHMJGOPFIdFS6bH8zzf7/fzeXm9qjIYyn7HveVH/9l21Xs2rFUZqipDlXt9BgDgso0qs8pQ5UlLjCaTybvecQXwilvKkKE8BeaYTHi9HHHGH+C1qsp9llhgwoSLDpQTtrHA6cp+n2OOyWQy4e4q67awh18czv2YLI1Y2DG54bayrzzsJvbweN7GLhgB31gr+8qbWBrxUX7Ap874Bx961pYbbi2z8qjnXQa/5SbOlSf863h5yJfuqbJSHrENdrON8+UOfzpVVYYyKys+wYgxV/F+lS9864R1xxwylFWbmEy4nk1ccaScBHOcK6s2MZqMuJQN8HQ56GMs8Gs55GvMMcdzWfMdfnesnMUedjxYTvobC/zlaGUD/Owu6xhNOFvlDczxYlXlZXDNYy6C791p1QO+MmLTwcpQVrwKlq4ZccFLLgE23V5mlVmVU34CAHDdCw6UWVVlqHLYaR/YsmvHlguecbTKrOp/SJwpqqcg1rEAAAAASUVORK5CYII="); }
+  #button-tray #button-behance {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsSAAALEgHS3X78AAAC7UlEQVRIiY2WTYhcRRDHfzW74ycaRTRRUHQVAwp+JYIRVpZADoE9qRcPgT14FwIiCN68iAheDKirXrwEPIh4CCQHWQVFEQwoZBdFkouKiosJMZmZNz8Pr3rT+5wdp6DpflXV9fHv6uo3zwykBlDGFhsgIsaz2JhqXJ2bQW+qzvy0jRHRAI16E/AA8ChwO3AJWAdOR8RG6qH2ZsosoSnre9Vj6jkn00D9Ul2ZNauug5fVi5XBRh11Rk3fqA9NddRxsNqJtlHHO4yROkzdC+rSjo7UXs7HcsM/6uU0UEaTsknOBim7pO6rbW7DUX1uB+xrKjBNc/SD2i/259WIiEa9Dng1+evAt0Cf9m4I9GirawEY53eX+sCQthKPAq+pc3UWK1W0b+xwblepH6fOr+ohdb/6iPpsZjJO+UYGvu0sPqmcvJu8ZXVN/Ux9PXn7U2egnlQ/zb1rFYzl7J4CmI+IsXoDcP+E4O8DFnP9MPAiMMjvc8BbwHcJ5+PAXuA2YJRwLgJr5cbfDNyaygE0yT8OnM4NZ/MwV1N2KB29D/Qi4oi6CZzkSo+7C660lauBa2kPtK7vfvIFboyIoXocOB8RP6vPALuBnroYEafUjQqVXu3kIvB3bqBytJyQAKDuBT6ogvgC+DwhvFM9WKFAwrZVhn8Cv1fCwh/mfB7YrAK4I9crwG/AX8B7GdSeys6ZEl0p4Q+r6nozedeo96gL6q7kHVY31bvz+3n1pVzfYttaCu0rTkoJL1fCj9Qn1IPqk+oBdUl9Rf0jdc6oT6t70vhh9cfKxtdW/XCL1K9SoXE6DafILud8pEaqzuZApTzyv72pbpKjTjCNbVNVPZH2optFOZsXUrEY7TqyM5cbXjI4q+6ug+86Khkd7UBTMpj2lqiuqwvbYJpEJUXb5vd9B+/6dezy31av/18HE6Dr25boKfWXjuGB7bvxjvpYF42aJv6t5PsyFxFD2l61qj4ILAG7aG/1T8CJiLhQGXfS38q/+kiSmtbHf5YAAAAASUVORK5CYII="); }
+  #button-tray #button-mail {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAA00lEQVQ4jdXSsU0DQRBG4dFxKS7BFjlkQCGYRjBUAj1YpGDqMBVAdA3gI7T9EXhOQtZhTuYC86LV7r9PM7sTcfBgirW/s8I08NGDrGFRRMRZRMx6aPYlIk4DtyhxhWqPqiqM0zGJ3HzFJY5xj2UH0TKzA1xgDrEVeMjAeRP4gXlKBtsFREu4wjWOcIP621mNiU17Yy1P1CZsmGGEIZ7wnOthrlvZJYRP3GVFpc0H1rsu/CZseMdbl2DZccZOug5jsd8M/3fhukefIiIee5Ku0nXgfAEq7LjWO2/DwAAAAABJRU5ErkJggg=="); }
+
+#tiles {
+  width: 1280px;
+  margin: 30px auto 0 auto; }
+  #tiles .tile {
+    background: no-repeat center;
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    display: inline-block; }
+  #tiles #tile-heroes {
+    background-image: url("../images/tile-heroes.png"); }
+  #tiles #tile-heroes1 {
+    background-image: url("../images/tile-heroes.png"); }
+  #tiles #tile-heroes2 {
+    background-image: url("../images/tile-heroes.png"); }
+  #tiles #tile-heroes3 {
+    background-image: url("../images/tile-heroes.png"); }
+  #tiles #tile-heroes4 {
+    background-image: url("../images/tile-heroes.png"); }
