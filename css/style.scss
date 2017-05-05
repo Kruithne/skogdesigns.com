@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*:focus {
+	outline: 0;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background: #212433;
+	color: #dbdbdb;
+	text-align: center;
+	font-size: 2em;
+}
+
+#header {
+	margin: 40px auto 0 auto;
+	font-size: 2em;
+	font-weight: bold;
+
+	span {
+		color: #3376c5;
+	}
+}
+
+#sub-header {
+	font-size: 0.6em;
+	margin: 10px auto 0 auto;
+}
+
+#info {
+	margin: 15px auto 0 auto;
+	font-weight: bold;
+	font-style: normal;
+	width: 800px;
+	font-size: 0.55em;
+}
