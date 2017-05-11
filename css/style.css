@@ -126,3 +126,8 @@ body {
     cursor: pointer; }
     #slide-cover #slide-image img {
       display: none; }
+    #slide-cover #slide-image iframe {
+      display: none;
+      width: 79%;
+      height: 84%;
+      margin-top: 5%; }

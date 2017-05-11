@@ -5,7 +5,7 @@ var slider = {
 		heroes: {
 			title: 'Heroes of the Storm Business Cards',
 			text: 'Heroes of the Storm themed business cards I created for TBKzord.',
-			slides: ['heroes-1.png', 'heroes-2.png', 'heroes-3.png']
+			slides: ['heroes-1.png', 'heroes-2.png', 'heroes-3.png', ['Xa8xiDaWqpg']]
 		}
 	}
 };
@@ -27,15 +27,31 @@ slider.previous = function() {
 
 slider.update = function() {
 	var image = slider._container;
-	var loader = slider._loader;
+	var embed = slider._embed;
 	var slide = slider._selected;
-	var resource = 'images/work/' + slide.slides[slider._index];
+	//var resource = 'images/work/' + slide.slides[slider._index];
+	var resource = slide.slides[slider._index];
 
-	image.stop().fadeOut(slider._speed, function() {
-		loader.attr('src', resource).on('load', function() {
-			image.css('background-image', 'url(' + resource + ')').fadeIn(slider._speed);
+	if (typeof resource === 'string') {
+		// Normal image.
+		var loader = slider._loader;
+		resource = 'images/work/' + resource;
+
+		embed.attr('src', 'about:blank').hide();
+		image.stop().fadeOut(slider._speed, function() {
+			loader.attr('src', resource).on('load', function() {
+				image.css('background-image', 'url(' + resource + ')').fadeIn(slider._speed);
+			});
 		});
-	});
+	} else {
+		// Embedded video.
+		resource = resource[0];
+
+		image.stop().fadeOut(slider._speed, function() {
+			embed.attr('src', 'https://www.youtube.com/embed/' + resource).show();
+			image.css('background-image', '').fadeIn(slider._speed);
+		});
+	}
 };
 
 slider.updateButtons = function() {
@@ -79,6 +95,7 @@ $(function() {
 	slider._element = $('#slide-cover');
 	slider._container = $('#slide-image').on('click', slider.close);
 	slider._loader = $('<img/>').appendTo(slider._container);
+	slider._embed = $('<iframe/>', { frameborder: 0 }).appendTo(slider._container);
 	slider._title = $('#slide-title');
 	slider._info = $('#slide-info');
 });

@@ -178,5 +178,14 @@ body {
 		img {
 			display: none;
 		}
+
+		iframe {
+			display: none;
+			//width: 560px;
+			//height: 315px;
+			width: 79%;
+			height: 84%;
+			margin-top: 5%;
+		}
 	}
 }
