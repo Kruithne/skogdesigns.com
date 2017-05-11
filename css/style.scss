@@ -139,6 +139,17 @@ body {
 		background-image: url($icon-arrow-left);
 	}
 
+	#slide-close {
+		position: absolute;
+		top: 26px;
+		right: 33px;
+		height: 32px;
+		width: 32px;
+		background: url($icon-cross);
+		z-index: 10;
+		cursor: pointer;
+	}
+
 	#slide-title, #slide-info {
 		position: absolute;
 		background: rgba(0, 0, 0, 0.5);

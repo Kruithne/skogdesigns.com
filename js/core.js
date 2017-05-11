@@ -5,7 +5,7 @@ var slider = {
 		heroes: {
 			title: 'Heroes of the Storm Business Cards',
 			text: 'Heroes of the Storm themed business cards I created for TBKzord.',
-			slides: ['heroes-1.png']
+			slides: ['heroes-1.png', 'heroes-2.png', 'heroes-3.png']
 		}
 	}
 };
@@ -71,6 +71,7 @@ $(function() {
 	$('.tile').on('click', function() { slider.open($(this).attr('data-slide')); });
 
 	// Initiate slider objects/elements.
+	$('#slide-close').on('click', slider.close);
 	var leftArrow = $('#slide-left').on('click', slider.previous);
 	var rightArrow = $('#slide-right').on('click', slider.next);
 	slider._arrowButtons = leftArrow.add(rightArrow);
