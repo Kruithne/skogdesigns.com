@@ -5,7 +5,7 @@ var slider = {
 		heroes: {
 			title: 'Heroes of the Storm Business Cards',
 			text: 'Heroes of the Storm themed business cards I created for TBKzord.',
-			slides: ['heroes-1.png', 'heroes-2.png', 'heroes-3.png']
+			slides: ['heroes-1.png']
 		}
 	}
 };
@@ -38,17 +38,27 @@ slider.update = function() {
 	});
 };
 
+slider.updateButtons = function() {
+	var slides = slider._selected.slides;
+	if (slides.length > 1)
+		slider._arrowButtons.show();
+	else
+		slider._arrowButtons.hide();
+};
+
 slider.open = function(index) {
 	var slide = slider.slides[index];
 	if (slide) {
 		slider._selected = slide;
 		slider._index = 0;
-		slider._element.fadeIn();
 
 		slider._title.text(slide.title);
 		slider._info.text(slide.text);
 
+		slider.updateButtons();
 		slider.update();
+
+		slider._element.fadeIn();
 	}
 };
 
@@ -61,8 +71,9 @@ $(function() {
 	$('.tile').on('click', function() { slider.open($(this).attr('data-slide')); });
 
 	// Initiate slider objects/elements.
-	$('#slide-left').on('click', slider.previous);
-	$('#slide-right').on('click', slider.next);
+	var leftArrow = $('#slide-left').on('click', slider.previous);
+	var rightArrow = $('#slide-right').on('click', slider.next);
+	slider._arrowButtons = leftArrow.add(rightArrow);
 
 	slider._element = $('#slide-cover');
 	slider._container = $('#slide-image').on('click', slider.close);
