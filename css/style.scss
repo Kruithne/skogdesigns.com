@@ -219,3 +219,64 @@ body {
 		}
 	}
 }
+
+#contact-form {
+	width: 400px;
+	margin: 10px auto;
+	border-collapse: collapse;
+
+	#error-row {
+		font-size: 0.6em;
+		padding-top: 20px;
+		color: #de6969;
+		display: none;
+
+		&.done {
+			color: green;
+		}
+	}
+
+	th {
+		font-weight: bold;
+		text-align: left;
+		font-size: 0.4em;
+		padding: 15px 0 10px 5px;
+	}
+
+	td {
+
+		input[type=text], textarea {
+			width: 100%;
+			border-radius: 3px;
+			border: 1px solid #dbdbdb;
+			padding: 5px;
+			box-shadow: black 0 0 13px 0;
+			display: block;
+
+			&:focus {
+				border-color: #3376c5;
+				box-shadow: #3376c5 0 0 13px 0;
+			}
+		}
+
+		textarea {
+			height: 90px;
+		}
+
+		input[type=button] {
+			padding: 6px 10px;
+			border-radius: 3px;
+			border: 1px solid #3376c5;
+			box-shadow: black 0 0 13px 0;
+			font-size: 0.5em;
+			font-weight: bold;
+			background-color: #3376c5;
+			color: #dbdbdb;
+			margin-top: 25px;
+
+			&:hover {
+				box-shadow: #3376c5 0 0 13px 0;
+			}
+		}
+	}
+}
