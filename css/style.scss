@@ -108,6 +108,26 @@ body {
 	}
 }
 
+#navigation {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.50);
+	text-align: center;
+
+	div {
+		display: inline-block;
+		margin: 30px 35px;
+		font-size: 1.2em;
+		color: rgba(255, 255, 255, 0.81);
+
+		&:hover {
+			color: white;
+		}
+	}
+}
+
 #slide-cover {
 	position: absolute;
 	top: 0;
