@@ -88,6 +88,13 @@ body {
     #navigation div:hover {
       color: white; }
 
+#commission-info {
+  width: 1024px;
+  margin: 0 auto; }
+  #commission-info p {
+    margin: 25px 0;
+    font-size: 0.6em; }
+
 #slide-cover {
   position: absolute;
   top: 0;
