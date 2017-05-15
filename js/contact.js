@@ -41,7 +41,7 @@ contact._checkFields = function() {
 			var node = contact._fields[index];
 			var input = node.element.val().trim();
 
-			if (input.length === 0)
+			if (input.length === 0 && !node.optional)
 				return node.name + ' cannot be blank!';
 
 			if (input.length > node.maxLength)
@@ -50,7 +50,8 @@ contact._checkFields = function() {
 			if (node.check && !node.check.test(input))
 				return node.name + ' must be valid!';
 
-			contact._values[index] = input;
+			if (input.length > 0) // Prevents optional fields being sent.
+				contact._values[index] = input;
 		}
 	}
 	return true;
@@ -80,6 +81,12 @@ $(function() {
 			name: 'Message',
 			element: $('#input-message'),
 			maxLength: 10000
+		},
+		budget: {
+			name: 'Budget',
+			optional: true,
+			element: $('#input-budget'),
+			maxLength: 100
 		}
 	};
 });

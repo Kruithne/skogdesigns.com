@@ -36,12 +36,20 @@
 		if ($fieldMessageLength == 0 || $fieldMessage > 10000)
 			return false;
 
+		$fieldBudget = cleanField('budget');
+		$fieldBudgetLength = strlen($fieldBudget);
+
+		// Assert budget length.
+		if ($fieldBudgetLength > 100)
+			return false;
+
 		$senderIP = $_SERVER['REMOTE_ADDR'];
 
 		$message = "This message was submitted using the contact form!\n\n";
 		$message .= "Name: $fieldName\n";
 		$message .= "E-mail: $fieldEmail\n";
 		$message .= "Subject: $fieldSubject\n";
+		$message .= "Budget: $fieldBudget\n";
 		$message .= "IP Address: $senderIP\n\n";
 		$message .= "Message: $fieldMessage";
 
